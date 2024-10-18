@@ -1,0 +1,1 @@
+export {default as HeadNav} from "./HeadNav.vue"

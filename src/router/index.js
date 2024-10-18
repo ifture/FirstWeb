@@ -11,6 +11,7 @@ const routes = [
     title:"产品中心",
     path:"/product/",
     name:"product",
+    is_children_show:false,  // 是否展示二级栏目
     children:[
       {
         title:"安全联锁",
@@ -36,6 +37,7 @@ const routes = [
     title:"解决方案",
     path:"/solution/",
     name:"solution",
+    is_children_show:false,
     children: [
       {
         title:"电力行业",

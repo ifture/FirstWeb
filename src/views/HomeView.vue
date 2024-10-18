@@ -23,7 +23,7 @@
       <div class="top">
         <div class="content_left">
           <div class="title">阀门便捷操作&安全机械联锁</div>
-          <img alt="logo" src="@/assets/image/home/logo.svg" class="logo" />
+          <img alt="logo" src="../assets/image/logo.svg" class="logo" />
         </div>
         <div class="content_right">
           上海凯研机械设备有限公司是一家致力于工业安全产品，技术解决方案及工程服务为一体的高新技术企业。

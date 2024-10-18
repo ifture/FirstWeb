@@ -1,16 +1,14 @@
-<script>
-import {HeadNav} from "@/components/index";
-export default {
-  components:{
-    // eslint-disable-next-line vue/no-unused-components
-    HeadNav,
-  }
-}
-</script>
 <template>
-  <head-nav/>
+<!--  <head-nav/>-->
+  <NavbarComp/>
   <router-view/>
 </template>
+
+<script setup>
+// import {HeadNav} from "@/components/HeadNav";
+import NavbarComp from "@/components/NavbarComp.vue";
+
+</script>
 
 <style>
 
