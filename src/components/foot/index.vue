@@ -4,15 +4,15 @@
       <div class="title">联系方式</div>
       <div class="info">
         <div class="icon"><el-icon><Phone /></el-icon></div>
-        <div class="content">联系电话: {{ store.state.foot.phone }}</div>
+        <div class="content">联系电话: 暂无电话</div>
       </div>
       <div class="info">
         <div class="icon"><el-icon><Message /></el-icon></div>
-        <div class="content">Email: {{ store.state.foot.email }}</div>
+        <div class="content">Email: sales@protect-safety.com</div>
       </div>
       <div class="info">
         <div class="icon"><el-icon><Location /></el-icon></div>
-        <div class="content">地址: {{ store.state.foot.address }}</div>
+        <div class="content">地址: 上海市奉贤区平庄西路1599号</div>
       </div>
     </div>
     <div class="bottom_navbar">
@@ -34,7 +34,7 @@
     </div>
     <div class="QR">
       <div class="title">更好关注</div>
-      <img class="QR_code" src="../assets/image/home/foot/QR.png" alt="QR Code" />
+      <img class="QR_code" src="../../assets/image/foot/QR.jpg" alt="QR Code" />
       <div class="scan">扫一扫</div>
     </div>
   </div>
@@ -43,10 +43,8 @@
 <script setup>
 import {Location, Message, Phone} from "@element-plus/icons-vue";
 import router from "@/router";
-import { useStore } from "vuex";
 
 const routes = router.options.routes;
-const store = useStore();
 </script>
 
 <style scoped>
@@ -55,7 +53,7 @@ const store = useStore();
   position: relative;
   width: 100%;
   height: 55vh;
-  background-image: url("../assets/image/home/foot/bg.png");
+  background-image: url("../../assets/image/foot/bg.png");
   background-color: #0c3c5a;
   background-repeat: no-repeat;
   background-position: center;
@@ -119,6 +117,7 @@ const store = useStore();
 }
 
 .bottom_navbar .content {
+  margin-left: -38px;
   margin-top: 40px;
   display: flex;
   width: 100%;

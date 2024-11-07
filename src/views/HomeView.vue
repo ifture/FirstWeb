@@ -2,40 +2,35 @@
   <div class="home">
 
     <!--   轮播图-开始   -->
-    <div class="carousel">
-      <div class="Navbar">
-
-      </div>
-      <div class="title">
-        <div class="content">
-          <span class="content_ch">公司简介</span>
-          <span class="content_en">ABOUT US</span>
-        </div>
-        <div class="line"></div>
-      </div>
-    </div>
+    <Carousel class="carousel">
+      <img src="../assets/image/home/carousel_1.jpg"  alt="carousel_1"/>
+      <img src="../assets/image/home/carousel_2.jpg"  alt="carousel_2"/>
+      <img src="../assets/image/home/carousel_3.jpg"  alt="carousel_3"/>
+      <img src="../assets/image/home/carousel_4.jpg"  alt="carousel_4"/>
+      <img src="../assets/image/home/carousel_5.jpg"  alt="carousel_5"/>
+    </Carousel>
     <!--   轮播图-结束   -->
 
 
-
     <!--   公司简介-开始   -->
-    <div class="company_profile">
+    <div id="company_profile" class="company_profile">
       <div class="top">
         <div class="content_left">
-          <div class="title">阀门便捷操作&安全机械联锁</div>
-          <img alt="logo" src="../assets/image/logo.svg" class="logo" />
+          <div class="title">安全联锁装置&截留钥匙联锁</div>
+          <img alt="logo" src="../../public/images/logo_1.png" class="logo" />
         </div>
         <div class="content_right">
-          上海凯研机械设备有限公司是一家致力于工业安全产品，技术解决方案及工程服务为一体的高新技术企业。
-          通过突破性技术创新,成功研制出两大拥有自主知识产权专利产品：柔性传动系统及编码式安全机械联锁。
-          产品通过权威部门认证，符合工业安全技术标准。我们旨在为石化行业、发电厂、海工船舶及核能行业中的阀门危险操作提供安全解决方案。
+          普洛泰柯(上海)安全技术有限公司是一家专注于工业安全工程领域解决方案公司，
+          以保护人员安全，保护过程控制安全为已任，按照客户需求提供定制化的产品及方案，为客户及企业赋能。
+          我们提供安全联锁装置，截留钥匙联锁(trapped key)，安全光幕，安全开关，安全门锁，拉绳开关， 防爆开关，安全评估，安全服务及定制化产品。
+          广泛应用于能源电力汽车、冶金、矿山、医药、食品饮料、仓储物流、轨道交通等工业领域，提供完整的解决方案。
         </div>
       </div>
       <div class="images">
         <ImageComp>
-          <img alt="image_1" src="../assets/image/home/company_profile/image_1.jpg" />
-          <img style="margin-left: 5%" alt="image_2" src="../assets/image/home/company_profile/image_2.jpg" />
-          <img style="margin-left: 5%" alt="image_3" src="../assets/image/home/company_profile/image_3.jpg" />
+          <img alt="image_1" src="../assets/image/home/image_1.jpg" />
+          <img style="margin-left: 5%" alt="image_2" src="../assets/image/home/image_2.jpg" />
+          <img style="margin-left: 5%" alt="image_3" src="../assets/image/home/image_3.jpg" />
         </ImageComp>
       </div>
     </div>
@@ -44,7 +39,7 @@
 
 
     <!--   公司理念-开始   -->
-    <div class="company_Philosophy">
+    <div id="company_philosophy" class="company_philosophy">
       <div class="module_1">
         <div class="content_1">01</div>
         <div class="content_2">Professional</div>
@@ -64,25 +59,19 @@
       <div class="module_3">
         <div class="content_1">03</div>
         <div class="content_2">responsibility</div>
-        <div class="content_3">阀门便捷操作&安全机械联锁</div>
+        <div class="content_3">安全联锁装置&截留钥匙联锁</div>
         <div class="content_4"></div>
         <div class="content_5">通过推进科技进步，保障人们的生命和财产安全，最终促进经济的发展和人类社会的全面进步。</div>
       </div>
     </div>
     <!--   公司理念-结束   -->
 
-
-
-    <!--   页尾-开始   -->
-    <FootComp></FootComp>
-    <!--   页尾-结束   -->
   </div>
 </template>
 
 <script setup>
-import ImageComp from '../components/ImageComp.vue';
-import FootComp from "@/components/FootComp.vue";
-
+import ImageComp from '../components/image/index.vue';
+import Carousel from '../components/carousel'
 </script>
 
 <style scoped>
@@ -94,41 +83,8 @@ import FootComp from "@/components/FootComp.vue";
 
 /* 以下是轮播图的样式 */
 .carousel {
-  width: 100%;
-  height: 70vh;
-  position: relative;
-  background-image: url("../assets/image/home/carousel/carousel_1.jpg");
-  background-repeat: no-repeat;
-}
-
-.carousel .title {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  margin: 0;
-}
-.carousel .title .content {
-  color: aliceblue;
-  display: inline-block;
-}
-
-.carousel .title .content .content_ch {
-  font-size: 3rem;
-  font-weight: 800;
-}
-
-.carousel .title .content .content_en {
-  margin-left: 10px;
-  font-size: 1.5rem;
-  font-weight: 500;
-}
-
-.carousel .title .line {
-  display: inline-block;
-  width: 55vw;
-  height: 3px;
-  background-color: aliceblue;
+  width: 99.2vw;
+  height: 100vh;
 }
 
 /* 以下是公司简介的样式 */
@@ -167,13 +123,13 @@ import FootComp from "@/components/FootComp.vue";
 .company_profile .top .content_right {
   position: absolute;
   display: inline-block;
-  width: 40vw;
+  width: 41vw;
   height: 30vh;
-  margin-left: 30vw;
+  margin-left: 29vw;
   font-size: 1.3rem;
   line-height: 2;   /* 设置行距为 2 倍字体大小 */
   text-indent: 2em; /* 设置首行缩进为 2 个字符的宽度 */
-  max-height: 10em; /* 设置最大高度 */
+  max-height: 12em; /* 设置最大高度 */
   overflow: hidden;
 }
 
@@ -186,81 +142,80 @@ import FootComp from "@/components/FootComp.vue";
 }
 
 .company_profile .images img {
-  object-fit: cover;
   width: 30%;
   height: 50vh;
 }
 
 /* 以下是公司理念的样式 */
-.company_Philosophy {
+.company_philosophy {
   display: flex;
   position: relative;
   text-align: center;
   width: 100%;
   height: 80vh;
   background-position: center;
-  background-image: url("../assets/image/home/company_Philosophy/bg.jpg");
+  background-image: url("../assets/image/home/bg.jpg");
 }
 
-.company_Philosophy .module_1 {
+.company_philosophy .module_1 {
   display: inline-block;
   width: 33.3%;
   opacity: 0.8;
 }
 
-.company_Philosophy .module_2 {
+.company_philosophy .module_2 {
   display: inline-block;
   width: 33.3%;
   opacity: 0.8;
 }
 
-.company_Philosophy .module_3 {
+.company_philosophy .module_3 {
   display: inline-block;
   width: 33.3%;
   opacity: 0.8;
 }
 
-.company_Philosophy .module_1:hover {
+.company_philosophy .module_1:hover {
   opacity: 1;
 }
 
-.company_Philosophy .module_2:hover {
+.company_philosophy .module_2:hover {
   opacity: 1;
 }
 
-.company_Philosophy .module_3:hover {
+.company_philosophy .module_3:hover {
   opacity: 1;
 }
 
-.company_Philosophy .line {
+.company_philosophy .line {
   display: inline-block;
   width: 0.05%;
   height: 100%;
   background-color: white;
 }
 
-.company_Philosophy .content_1 {
+.company_philosophy .content_1 {
   font-size: 2.5rem;
   font-weight: 600;
   color: #a19ea1;
   margin-top: 30%;
 }
 
-.company_Philosophy .content_2 {
+.company_philosophy .content_2 {
   color: #a19ea1;
   font-size: 1.5rem;
   font-weight: 500;
   margin-top: 15%;
 }
 
-.company_Philosophy .content_3 {
+.company_philosophy .content_3 {
   color: #ffffff;
   font-size: 2rem;
   font-weight: 600;
   margin-top: 8%;
 }
 
-.company_Philosophy .content_4 {
+.company_philosophy .content_4 {
   background-color: white;
   display: block;
   width: 50px;
@@ -269,7 +224,7 @@ import FootComp from "@/components/FootComp.vue";
   margin-top: 5%;
 }
 
-.company_Philosophy .content_5 {
+.company_philosophy .content_5 {
   color: aliceblue;
   line-height: 1.5;
   width: 70%;

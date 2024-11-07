@@ -8,26 +8,45 @@ const routes = [
     component: () => import('../views/HomeView.vue')
   },
   {
+    title:"关于我们",
+    path: '/about/',
+    name: 'about',
+    component: () => import('../views/HomeView.vue'),
+    children:[
+      {
+        title:"公司简介",
+        path:"#company_profile",
+        name:"profile",
+        component: () => import('../views/HomeView.vue'),
+      },
+      {
+        title:"公司理念",
+        path:"#company_philosophy",
+        name:"philosophy",
+        component: () => import('../views/HomeView.vue'),
+      }
+    ]
+  },
+  {
     title:"产品中心",
     path:"/product/",
     name:"product",
-    is_children_show:false,  // 是否展示二级栏目
     children:[
       {
         title:"安全联锁",
-        path:"/interlock/",
+        path:"/product/interlock/",
         name:"interlock",
         component:() => import('../views/product/interlock/index.vue'),
       },
       {
         title:"安全光栅及控制模块",
-        path:"/raster/",
+        path:"/product/raster/",
         name:"raster",
         component:() => import('../views/product/raster/index.vue'),
       },
       {
         title:"安全评估",
-        path:"/assessment/",
+        path:"/product/assessment/",
         name:"assessment",
         component:() => import('../views/product/assessment/index.vue'),
       },
@@ -37,53 +56,52 @@ const routes = [
     title:"解决方案",
     path:"/solution/",
     name:"solution",
-    is_children_show:false,
     children: [
       {
         title:"电力行业",
-        path:"/power/",
+        path:"/solution/power/",
         name:"power",
         component:() => import('../views/solution/power/index.vue'),
       },
       {
         title:"轨道交通",
-        path:"/traffic/",
+        path:"/solution/traffic/",
         name:"traffic",
         component:() => import('../views/solution/traffic/index.vue'),
       },
       {
         title:"石化行业",
-        path:"/Petrochemical/",
+        path:"/solution/Petrochemical/",
         name:"Petrochemical",
         component:() => import('../views/solution/Petrochemical/index.vue'),
       },
       {
         title:"汽车行业",
-        path:"/car/",
+        path:"/solution/car/",
         name:"car",
         component:() => import('../views/solution/car/index.vue'),
       },
       {
         title:"物流自动化",
-        path:"/logistics/",
+        path:"/solution/logistics/",
         name:"logistics",
         component:() => import('../views/solution/logistics/index.vue'),
       },
       {
         title:"食品饮料",
-        path:"/food/",
+        path:"/solution/food/",
         name:"food",
         component:() => import('../views/solution/food/index.vue'),
       },
       {
         title:"冶金制造业",
-        path:"/metallurgy/",
+        path:"/solution/metallurgy/",
         name:"metallurgy",
         component:() => import('../views/solution/metallurgy/index.vue'),
       },
       {
         title:"公共服务业",
-        path:"/service/",
+        path:"/solution/service/",
         name:"service",
         component:() => import('../views/solution/service/index.vue'),
       },
