@@ -1,6 +1,6 @@
 import { createStore } from 'vuex'
 import home from './home'
-import foot from './foot'
+import product from './product'
 
 export default createStore({
   state: {
@@ -13,6 +13,6 @@ export default createStore({
   },
   modules: {
     home: home,
-    foot: foot,
+    product: product,
   }
 })

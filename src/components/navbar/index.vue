@@ -99,6 +99,7 @@ function handleScroll() {
 
 .main:hover {
   background-color: #0c3c5a !important;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.7);
 }
 /* 动态样式 */
 

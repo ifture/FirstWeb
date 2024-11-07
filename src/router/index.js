@@ -31,24 +31,25 @@ const routes = [
     title:"产品中心",
     path:"/product/",
     name:"product",
+    component: () => import('../views/product/index.vue'),
     children:[
       {
         title:"安全联锁",
         path:"/product/interlock/",
         name:"interlock",
-        component:() => import('../views/product/interlock/index.vue'),
+        component:() => import('../views/product/index.vue'),
       },
       {
         title:"安全光栅及控制模块",
         path:"/product/raster/",
         name:"raster",
-        component:() => import('../views/product/raster/index.vue'),
+        component:() => import('../views/product/index.vue'),
       },
       {
         title:"安全评估",
         path:"/product/assessment/",
         name:"assessment",
-        component:() => import('../views/product/assessment/index.vue'),
+        component:() => import('../views/product/index.vue'),
       },
     ]
   },
