@@ -19,7 +19,7 @@ import { useStore } from "vuex";
 const store = useStore();
 
 // 获取电力行业的数据
-const data = store.state.solution.car;
+const data = store.state.solution.petrochemical;
 
 </script>
 

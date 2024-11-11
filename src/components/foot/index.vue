@@ -34,7 +34,7 @@
     </div>
     <div class="QR">
       <div class="title">更好关注</div>
-      <img class="QR_code" src="../../assets/image/foot/QR.jpg" alt="QR Code" />
+      <img class="QR_code" src="../../../public/images/foot/QR.jpg" alt="QR Code" />
       <div class="scan">扫一扫</div>
     </div>
   </div>
@@ -50,13 +50,13 @@ const routes = router.options.routes;
 <style scoped>
 .foot {
   display: flex;
-  position: relative;
+  position: absolute;
   width: 100%;
-  height: 55vh;
-  background-image: url("../../assets/image/foot/bg.png");
+  height: 570px;
+  background-image: url("../../../public/images/foot/bg.png");
   background-color: #0c3c5a;
   background-repeat: no-repeat;
-  background-position: center;
+  background-size: cover;
 }
 
 .title {

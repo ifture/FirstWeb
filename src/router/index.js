@@ -74,7 +74,7 @@ const routes = [
         title:"石化行业",
         path:"/solution/Petrochemical/",
         name:"Petrochemical",
-        component:() => import('../views/solution/Petrochemical/index.vue'),
+        component:() => import('@/views/solution/petrochemical/index.vue'),
       },
       {
         title:"汽车行业",

@@ -1,16 +1,14 @@
 <template>
   <div>
     <!--   headImg-开始   -->
-    <headImg content_cn="产品中心" content_en="PRODUCT CENTER" src="/images/headImg/product_1.jpg"/>
+    <headImg contentCn="产品中心" contentEn="PRODUCT CENTER" src="/images/headImg/product_interlock.jpg"/>
     <!--   headImg-结束   -->
 
 
 
     <!--   head-开始   -->
     <div class="head">
-      <div id="interlock" class="head_child" :class="{head_child_active: onActiveHead === 'interlock'}" @click="active($event)">安全联锁</div>
-      <div id="raster" class="head_child" :class="{head_child_active: onActiveHead === 'raster'}" @click="active($event)">安全光栅及控制模块</div>
-      <div id="assessment" class="head_child" :class="{head_child_active: onActiveHead === 'assessment'}" @click="active($event)">安全评估</div>
+      <div v-for="(item, index) in productRouter" :key="index" class="head_child" :class="{ 'head_child_active': onActiveHead === item.name }" @click="active(item)">{{ item.title }}</div>
     </div>
     <!--   head-结束   -->
 
@@ -54,18 +52,19 @@ import { useStore } from "vuex";
 import router from "@/router";
 
 const store = useStore();
+const productRouter = router.options.routes[2].children;  // 产品中心二级路由
 
 // 默认激活安全联锁页面
 let onActiveHead = ref("interlock");
 
 // 激活函数
-const active = (event) => {
-  onActiveHead.value = event.target.id;
-  router.push({name: event.target.id})  // 没什么用，就为了路径上看起来是对的，实际上都是同一个页面
+const active = (item) => {
+  onActiveHead.value = item.name
+  router.push({name: item.name})  // 没什么用，就为了路径上看起来是对的，实际上都是同一个页面
 }
 
 // 路由跳转时的相关页面激活
-let path = router.currentRoute.value.fullPath
+let path = router.currentRoute.value.fullPath;
 if (path === '/product/interlock/') onActiveHead.value = 'interlock';
 if (path === '/product/raster/') onActiveHead.value = 'raster';
 if (path === '/product/assessment/') onActiveHead.value = 'assessment';

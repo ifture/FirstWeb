@@ -2,8 +2,8 @@
   <div class="headImg" :style="{ backgroundImage: `url(${props.src})` }">
     <div class="title">
       <div class="content">
-        <span class="content_ch">{{ props.content_cn }}</span>
-        <span class="content_en">{{ props.content_en }}</span>
+        <span class="content_ch">{{ props.contentCn }}</span>
+        <span class="content_en">{{ props.contentEn }}</span>
       </div>
       <div class="line"></div>
     </div>
@@ -12,9 +12,9 @@
 
 <script setup>
 const props = defineProps({
-  content_cn: String,
-  content_en: String,
   src: String,
+  contentCn: String,
+  contentEn: String,
 })
 </script>
 
