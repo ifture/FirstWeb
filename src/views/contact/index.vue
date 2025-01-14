@@ -1,7 +1,7 @@
 <template>
 
   <!--   headImg-开始   -->
-  <HeadImg contentCn="联系我们" contentEn="CONTACT US" src="/images/headImg/solution_power.jpg" />
+  <HeadImg contentCn="联系我们" contentEn="CONTACT US" src="/images/contact/contact.png" />
   <!--   headImg-结束   -->
 
 

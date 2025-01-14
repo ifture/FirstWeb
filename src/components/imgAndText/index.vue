@@ -38,7 +38,7 @@ const props = defineProps({
 
 .card {
   position: absolute;
-  width: 930px;
+  width: 41vw;
   height: 200px;
   padding: 50px;
   margin-top: 400px;

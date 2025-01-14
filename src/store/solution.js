@@ -31,7 +31,7 @@ export default createStore({
         logistics: {
             headImg: {
                 src: "/images/headImg/solution_logistics.jpg",
-                contentCn: "物流运输",
+                contentCn: "物流自动化",
                 contentEn: "LOGISTICS AUTOMATION",
             },
             imgAndText: {

@@ -13,7 +13,7 @@
 
 
     <!--   公司简介-开始   -->
-    <div id="company_profile" class="company_profile">
+    <div ref="profileRef" class="company_profile">
       <div class="top">
         <div class="content_left">
           <div class="title">安全联锁装置&截留钥匙联锁</div>
@@ -39,7 +39,7 @@
 
 
     <!--   公司理念-开始   -->
-    <div id="company_philosophy" class="company_philosophy">
+    <div ref="philosophyRef" class="company_philosophy">
       <div class="module_1">
         <div class="content_1">01</div>
         <div class="content_2">Professional</div>
@@ -70,8 +70,35 @@
 </template>
 
 <script setup>
+import { onMounted, ref } from "vue";
+import router from "@/router";
 import ImageComp from '../components/image/index.vue';
 import Carousel from '../components/carousel'
+
+// ref属性
+const profileRef = ref(null);
+const philosophyRef = ref(null);
+
+onMounted(() => {
+  let currentPath = router.currentRoute.value.fullPath;
+  // 根据当前路径决定滚动哪个元素
+  if (currentPath === "/about/company_profile") {
+    scrollIntoView(profileRef);
+  } else if (currentPath === "/about/company_philosophy") {
+    scrollIntoView(philosophyRef);
+  }
+});
+
+// 滚动函数
+function scrollIntoView(elementRef) {
+  if (elementRef.value) {
+    elementRef.value.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+      inline: 'nearest'
+    });
+  }
+}
 </script>
 
 <style scoped>
@@ -83,7 +110,7 @@ import Carousel from '../components/carousel'
 
 /* 以下是轮播图的样式 */
 .carousel {
-  width: 99.2vw;
+  width: 99vw;
   height: 100vh;
 }
 
@@ -129,13 +156,13 @@ import Carousel from '../components/carousel'
   font-size: 1.3rem;
   line-height: 2;   /* 设置行距为 2 倍字体大小 */
   text-indent: 2em; /* 设置首行缩进为 2 个字符的宽度 */
-  max-height: 12em; /* 设置最大高度 */
+  max-height: 10em; /* 设置最大高度 */
   overflow: hidden;
 }
 
 .company_profile .images {
   position: absolute;
-  margin-top: 40vh;
+  margin-top: 45vh;
   margin-left: 15vw;
   width: 70vw;
   height: 50vh;

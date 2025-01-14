@@ -65,9 +65,9 @@ const active = (item) => {
 
 // 路由跳转时的相关页面激活
 let path = router.currentRoute.value.fullPath;
-if (path === '/product/interlock/') onActiveHead.value = 'interlock';
-if (path === '/product/raster/') onActiveHead.value = 'raster';
-if (path === '/product/assessment/') onActiveHead.value = 'assessment';
+if (path === '/product/interlock') onActiveHead.value = 'interlock';
+if (path === '/product/raster') onActiveHead.value = 'raster';
+if (path === '/product/assessment') onActiveHead.value = 'assessment';
 </script>
 
 <style scoped>
