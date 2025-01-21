@@ -1,11 +1,20 @@
 {
   "name": "first_web",
   "version": "0.1.0",
+  "main": "server.js",
+  "bin": "server.js",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
+  },
+  "pkg": {
+    "scripts": "server.js",
+    "targets": [
+      "node16-win"
+    ],
+    "outputPath": "dist"
   },
   "dependencies": {
     "@element-plus/icons-vue": "^2.3.1",
@@ -14,6 +23,7 @@
     "connect-history-api-fallback": "^2.0.0",
     "core-js": "^3.8.3",
     "element-plus": "^2.8.7",
+    "http-server": "^14.1.1",
     "vue": "^3.2.13",
     "vue-lazyload": "^3.0.0",
     "vue-router": "^4.0.3",

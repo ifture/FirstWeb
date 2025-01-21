@@ -120,7 +120,13 @@ const routes = [
 
 const router = createRouter({
   history: createWebHistory(),
-  routes
+  routes,
+  scrollBehavior( to) {
+    // 除掉 /about/company_philosophy 和 /about/company_profile 其他页面始终滚动到顶部
+    if (to.fullPath !== "/about/company_philosophy" && to.fullPath !== "/about/company_profile") {
+      return { top: 0 };
+    }
+  }
 })
 
 export default router
