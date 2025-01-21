@@ -47,7 +47,7 @@
 <script setup>
 import headImg from  '@/components/headImg'
 import {ArrowRight} from "@element-plus/icons-vue";
-import { ref } from "vue";
+import { watch, ref } from "vue";
 import { useStore } from "vuex";
 import router from "@/router";
 
@@ -64,10 +64,12 @@ const active = (item) => {
 }
 
 // 路由跳转时的相关页面激活
-let path = router.currentRoute.value.fullPath;
-if (path === '/product/interlock') onActiveHead.value = 'interlock';
-if (path === '/product/raster') onActiveHead.value = 'raster';
-if (path === '/product/assessment') onActiveHead.value = 'assessment';
+watch(() => router.currentRoute.value.fullPath, (newPath) => {
+  if (newPath === '/product/interlock') onActiveHead.value = 'interlock';
+  if (newPath === '/product/raster') onActiveHead.value = 'raster';
+  if (newPath === '/product/assessment') onActiveHead.value = 'assessment';
+});
+
 </script>
 
 <style scoped>

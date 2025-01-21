@@ -11,14 +11,14 @@
             @mouseleave="closeSubMenu"
         >
           <span class="line"></span>
-          <a class="first" :href="route.path">{{ route.title }}</a>
+          <router-link class="first" :to="route.path">{{ route.title }}</router-link>
           <ul class="children_ul" v-if="isSubMenuOpen(route.name)">
             <li
                 class="children_li"
                 v-for="childRoute in route.children"
                 :key="childRoute.name"
             >
-              <a :href="childRoute.path">{{ childRoute.title }}</a>
+              <router-link :to="childRoute.path">{{ childRoute.title }}</router-link>
             </li>
           </ul>
         </li>
@@ -92,7 +92,7 @@ function handleScroll() {
   background-color: #0c3c5a;
 }
 
-/* 动态样式 */
+/* 动态样式-悬浮切换导航栏的logo和颜色 */
 .main:hover .logo {
   background-image: url("../../../public/images/logo_2.png") !important;
 }
@@ -101,7 +101,7 @@ function handleScroll() {
   background-color: #0c3c5a !important;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.7);
 }
-/* 动态样式 */
+/* 动态样式-悬浮切换导航栏的logo和颜色 */
 
 .logo {
   display: inline-block;

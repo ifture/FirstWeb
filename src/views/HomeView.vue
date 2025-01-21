@@ -70,7 +70,7 @@
 </template>
 
 <script setup>
-import { onMounted, ref } from "vue";
+import { ref, watch  } from "vue";
 import router from "@/router";
 import ImageComp from '../components/image/index.vue';
 import Carousel from '../components/carousel'
@@ -79,12 +79,12 @@ import Carousel from '../components/carousel'
 const profileRef = ref(null);
 const philosophyRef = ref(null);
 
-onMounted(() => {
-  let currentPath = router.currentRoute.value.fullPath;
+// 监听路由变化
+watch(() => router.currentRoute.value.fullPath, (newPath) => {
   // 根据当前路径决定滚动哪个元素
-  if (currentPath === "/about/company_profile") {
+  if (newPath === "/about/company_profile") {
     scrollIntoView(profileRef);
-  } else if (currentPath === "/about/company_philosophy") {
+  } else if (newPath === "/about/company_philosophy") {
     scrollIntoView(philosophyRef);
   }
 });

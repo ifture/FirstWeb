@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 
 const routes = [
   {
+
     title:"首页",
     path: '/',
     name: 'home',

@@ -12,4 +12,4 @@ import headImg from  '@/components/headImg'
 
 <style scoped>
 
-</style>S
+</style>

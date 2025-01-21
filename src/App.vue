@@ -3,7 +3,7 @@
   <NavbarComp/>
   <!--  导航栏结束  -->
 
-  <router-view/>
+  <router-view></router-view>
 
   <!--   页尾-开始   -->
   <FootComp></FootComp>
